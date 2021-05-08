@@ -1,0 +1,37 @@
+<CTRL SHIFT O> - importação automática
+<CTRL SHIFT F> - alinhamento do código
+<CTRL ESPAÇO> - completa o comando
+<ALT SHIFT Y> - quebra automática de linha
+Help -> Eclipse Marketplace (instalação de plugins)
+Window -> Perspective -> reset perspective
+sysout <ctrl espaço>
+try <ctrl espaço>
+
+______________________________________________________
+Backup - Restore
+
+backup -> copiar a pasta inteira do projeto no workspace
+
+restore:
+Passo 1: copiar a pasta do projeto no workspace
+Passo 2: File -> import
+Passo 3: Expandir a pasta General
+Passo 4: Existing projects into workspace
+Passo 5: Browse -> selecionar a pasta do workspace
+Passo 6: Selecionar o projeto -> finish
+
+Obs: Para abrir uma classe com o Editor do Wiwdow Builder
+     selecione a classe com o botão direito do mouse ->
+     open with window builder
+
+___________________________________________________________
+Gerar o executável (.jar)
+
+Selecionar o projeto com o botão direito do mouse
+-> export
+-> Java
+-> Runnable JAR File
+
+
+
+

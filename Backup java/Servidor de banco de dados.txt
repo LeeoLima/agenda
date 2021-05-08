@@ -1,0 +1,72 @@
+
+SLIDE
+https://www.slideshare.net/josedeassisfilho/banco-de-dados-231067009
+
+Passo 1: Obter o Debian
+https://www.debian.org/distrib/
+Escolher: iso netinstall para PC 64 bits
+_________________________________________________
+Passo 2: Instalar o Debian
+Usar a senha padrão para tudo:
+Senac@123
+_________________________________________________
+Passo 3: Configurar um IP fixo no Servidor
+No virtual box mudar as configurações de rede do
+adaptador para o modo bridge.
+vi /etc/network/interfaces
+<esc>
+:set number
+12 iface enp0s3 inet static
+13 address 10.26.45.x
+14 netmask 255.255.255.0
+15 gateway 10.26.45.1
+16 network 10.26.45.0
+17 broadcast 10.26.45.255
+18 dns-nameservers 8.8.8.8 8.8.4.4
+<esc>
+:wq
+reboot
+Fazer 2 testes de ping
+PC Real -> Debian
+Debian -> site externo
+______________________________________________
+Passo 4: Instalação do MySQL Oracle
+
+1) apt install gnupg
+
+2) mysql.com -> download community
+apt repositorie
+copiar o endereço do link
+https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
+No servidor Linux, digitar o comando:
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+
+3) dpkg -i my<tab>
+*** Na tela azul manter o padrão
+
+4) apt update
+
+5) apt install mysql-server
+mysql -V
+systemctl status mysql
+
+6) mysql_secure_installation (script de segurança)
+mysql -u root -p
+select user,host from mysql.user;
+create user 'dba'@'%' identified by 'Senac@123';
+grant all privileges on *.* to 'dba'@'%';
+flush privileges; (aplicar alterações sem reiniciar o servidor)
+<ctrl><d>
+mysql -u dba -p
+
+
+
+
+
+
+
+
+
+
+
+

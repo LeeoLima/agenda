@@ -1,0 +1,15 @@
+Projeto 1: Agenda de contatos:
+
+Passo1 - Levantamento das necessidades do cliente
+Nome do contato (obrigatório)
+telefone do contato (obrigatório)
+E-mail (não obrigatório)
+___________________________________________
+Passo 2 - Banco de dados
+idcon (chave primária - PK) número inteiro
+nome (obrigatório)
+fone (obrigatório)
+email
+___________________________________________
+Passo 3 - Java
+
